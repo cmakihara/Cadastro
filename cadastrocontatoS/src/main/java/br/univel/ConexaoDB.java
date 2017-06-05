@@ -14,13 +14,9 @@ public final class ConexaoDB {
 	private ConexaoDB() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			this.con = DriverManager
-					.getConnection(
-					"jdbc:postgresql://localhost:5432/agenda",
-					"postgres", "univel");
+			this.con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/agenda","postgres", "sa");
 			
-			Runtime.getRuntime()
-				.addShutdownHook(new Thread(new Runnable() {
+			Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 					@Override
 					public void run() {
 						try {

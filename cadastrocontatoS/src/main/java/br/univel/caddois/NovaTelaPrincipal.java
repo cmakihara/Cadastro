@@ -56,8 +56,38 @@ public class NovaTelaPrincipal extends JFrame {
 		});
 		panel.add(btnContato);
 		
+		JButton btnProduto = new JButton("Produto");
+		btnProduto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				adicionarAbaProduto();
+			}
+		});
+		panel.add(btnProduto);
+		
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
+	}
+
+	protected void adicionarAbaProduto() {
+		JPanel painelProduto = new PainelProduto();
+		
+		PainelWrapper wrapper = new PainelWrapper();
+		wrapper.setConteudo(painelProduto);
+		wrapper.setTitulo("Cadastro de Produto");
+		
+		wrapper.setAcaoFechar(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.remove(wrapper);
+			}
+		});
+		
+		
+		
+		
+		
+		tabbedPane.addTab("Produto", wrapper);
+		
 	}
 
 	protected void adicionarAbaContato() {

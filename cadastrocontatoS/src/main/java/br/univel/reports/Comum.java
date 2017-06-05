@@ -20,7 +20,7 @@ public class Comum {
 	
 	public static void main(String[] args) {
 		
-		String file = "C:\\Users\\fernandod\\JaspersoftWorkspace\\MyReports\\HelloJasper2.jasper";
+		String file = "C:\\Users\\Maki\\JaspersoftWorkspace\\MyReports\\teste.jasper";
 		
 		JasperPrint jasperPrintPDF;
 		try {

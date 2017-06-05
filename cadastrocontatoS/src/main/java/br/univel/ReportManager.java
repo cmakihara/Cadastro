@@ -19,9 +19,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class ReportManager {
 
-	private static final String JASPER_CONTATO = "C:\\Users\\"
-			+ "fernandod\\JaspersoftWorkspace\\"
-			+ "MyReports\\HelloJasper2.jasper";
+	private static final String JASPER_CONTATO = "C:\\Users\\Maki\\JaspersoftWorkspace\\MyReports\\teste.jasper";
 
 	public void imprimir() {
 		JasperPrint jasperPrintPDF = getPrint();
@@ -57,9 +55,7 @@ public class ReportManager {
 	
 	
 	public void exportarCustom() {
-		String strFile = "C:\\Users\\fernandod\\"
-				+ "JaspersoftWorkspace\\MyReports"
-				+ "\\CustomFields.jasper";
+		String strFile = "C:\\Users\\Maki\\JaspersoftWorkspace\\MyReports\\teste.jasper";
 		
 		ContatoDao dao = new ContatoDao();
 		List<Contato> lista = dao.getTodos();
